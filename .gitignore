@@ -1,0 +1,5 @@
+/pyfortune/*.pyc
+
+/PyFortune.egg-info
+
+/pyfortune/__pycache__
