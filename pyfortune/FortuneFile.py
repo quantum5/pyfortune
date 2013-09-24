@@ -15,16 +15,25 @@ class FortuneFile(object):
     
     def __parse_fortune(self):
         self.fortunes = fortunes = []
+        self.table = table = []
+        data = self.file
         buf = []
-        for line in self.file:
+        start = 0
+        end = None
+        for line in data:
             line = line.rstrip(b'\r\n')
             if line == b'%':
-                fortunes.append(b'\n'.join(buf).decode('utf-8', 'replace'))
-                buf = []
+                fortunes.append(b'\n'.join(buf))
+                del buf[:]
+                if end is not None:
+                    table.append((start, end - start))
+                start = data.tell()
             else:
                 buf.append(line)
+                end = data.tell()
         if buf:
-            fortunes.append(b'\n'.join(buf).decode('utf-8', 'replace'))
+            fortunes.append(b'\n'.join(buf))
+            table.append((start, end - start))
         self.size = len(fortunes)
     
     def choose(self, long=None, size=160, count=1):
@@ -36,30 +45,14 @@ class FortuneFile(object):
             fortunes = self.fortunes
         if len(fortunes) < count:
             return None
-        sample = random.sample(fortunes, count)
+        sample = [i.decode('utf-8', 'replace') for i in random.sample(fortunes, count)]
         return sample[0] if count == 1 else sample
     
     def compile(self, file):
         if self.mtime is None:
             return # Can't and won't compile
-        data = self.file
-        data.seek(0, 0)
-        start = 0
-        end = None
         file.write(sthead.pack(0xDEADFACE, len(self.fortunes), 0, self.mtime))
-        while True:
-            line = data.readline()
-            if not line:
-                break
-            if line.rstrip(b'\r\n') == b'%':
-                if end is not None:
-                    file.write(stentry.pack(start, end - start))
-                start = data.tell()
-                end = None
-            else:
-                end = data.tell()
-        if end is not None:
-            file.write(stentry.pack(start, end - start))
+        file.write(b''.join(stentry.pack(start, length) for start, length in self.table))
     
     def __unicode__(self):
         if self.path is not None:
