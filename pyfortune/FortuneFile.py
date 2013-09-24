@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 from pyfortune.compile import sthead, stentry
 import os
+import sys
 import random
 
 class FortuneFile(object):
@@ -66,5 +67,8 @@ class FortuneFile(object):
             return '<Fortune File: Path: %s>' % self.path
         return '<Fortune File: %s>' % self.file
     
-    def __str__(self):
-        return unicode(self).encode('mbcs' if os.name == 'nt' else 'utf-8', 'xmlcharrefescape')
+    if int(sys.version[0]) > 2:
+        __str__ = __unicode__
+    else:
+        def __str__(self):
+            return unicode(self).encode('mbcs' if os.name == 'nt' else 'utf-8', 'xmlcharrefescape')

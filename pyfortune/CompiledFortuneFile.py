@@ -20,13 +20,14 @@ class CompiledFortuneFile(FortuneFile):
     
     @classmethod
     def stream(cls, compiled, data, compiled_path=None, data_path=None):
-        self = cls.__new__()
+        self = cls.__new__(cls)
         self.compiled_path = compiled_path
         self.data_path = data_path
         self.data = data
         self.compiled = compiled
         self.mtime = 0
         self.__load_compiled()
+        return self
     
     def __load_compiled(self, entry=stentry.unpack, block=stentry.size):
         read = self.compiled.read
@@ -83,5 +84,8 @@ class CompiledFortuneFile(FortuneFile):
             return '<Compiled Fortune File: Path: %s>' % self.compiled_path
         return '<Compiled Fortune File: %s>' % self.compiled
     
-    def __str__(self):
-        return unicode(self).encode('mbcs' if os.name == 'nt' else 'utf-8', 'xmlcharrefescape')
+    if int(sys.version[0]) > 2:
+        __str__ = __unicode__
+    else:
+        def __str__(self):
+            return unicode(self).encode('mbcs' if os.name == 'nt' else 'utf-8', 'xmlcharrefescape')
