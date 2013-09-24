@@ -38,7 +38,7 @@ def main():
     args = parser.parse_args()
 
     if args.files:
-        for fortune in list_fortune():
+        for fortune in list_fortune(args.offend):
             print(fortune)
         raise SystemExit
     chooser = Chooser(offensive=args.offend)
