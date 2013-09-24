@@ -47,8 +47,11 @@ def main():
         raise SystemExit("%s: Can't find a fortune!!" % sys.argv[0])
     print(choice)
     if args.wait:
-        import time
-        time.sleep(max(6, len(choice) / 20))
+        try:
+            import time
+            time.sleep(max(6, len(choice) / 20))
+        except KeyboardInterrupt:
+            pass
 
 if __name__ == '__main__':
     main()
