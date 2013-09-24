@@ -4,7 +4,7 @@ import sys
 import argparse
 
 def main():
-    parser = argparse.ArgumentParser(description='Python reimplementation of the classic cowsay.')
+    parser = argparse.ArgumentParser(description='Python reimplementation of the classic fortune.')
     parser.set_defaults(offend=False)
     parser.set_defaults(long=None)
     parser.add_argument('-a', '--all', action='store_const', dest='offend', const=False,
