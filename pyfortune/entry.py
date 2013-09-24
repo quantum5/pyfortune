@@ -7,8 +7,40 @@ description = """\
 Python reimplementation of the classic fortune.
 """
 
+usage = '%(prog)s [-h] [-aoceflsw] [-n size] [[chance#%%] file]...'
+
 def main():
-    parser = argparse.ArgumentParser(description=description)
+    parser = argparse.ArgumentParser(
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        description="""
+Python reimplementation of the classic fortune.
+
+When fortune is run with no arguments it prints out a random fortune cookie.
+Cookies are divided into several categories.""",
+        usage='%(prog)s [-h] [-aoceflsw] [-n size] [[chance#%%] file]...',
+        epilog="""
+You may specify alternate sayings, by passing a list of sayings as the `file`
+argument. These preceded by a percentage, which is a number n between 0 and
+100 inclusive, followed by a %. If it is, there will be a n percent chance
+that a cookie will be picked from that file. If the percentages do not sum to
+100, and there are files without percentages, the remaining probability will
+apply to those files, divided into pieces by their relative sizes, unless
+`-e` is passed, then all of then gets an equal share.
+
+For example, given two databases 'funny' and 'not-funny', with 'funny' twice
+as big (in number of fortunes, not raw file size), saying
+    fortune funny not-funny 
+will get you fortunes out of funny two-thirds of the time. The command
+    fortune 90% funny 10% not-funny 
+will pick out 90% of its fortunes from funny (the "10% not-funny" is
+unnecessary, since 10% is all that's left).
+
+The -e option says to consider all files equal; thus
+    fortune -e funny not-funny
+is equivalent to
+    fortune 50% funny 50% not-funny
+""",
+    )
     parser.set_defaults(offend=False)
     parser.set_defaults(long=None)
     parser.add_argument('-a', '--all', action='store_const', dest='offend', const=None,
