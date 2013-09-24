@@ -29,32 +29,38 @@ class CompiledFortuneFile(FortuneFile):
         self.__load_compiled()
         return self
     
-    def __load_compiled(self, entry=stentry.unpack, block=stentry.size):
-        read = self.compiled.read
-        self.version, self.size, self.flags, mtime = sthead.unpack(read(sthead.size))
+    def __load_compiled(self):
+        self.version, self.size, self.flags, mtime = sthead.unpack(self.compiled.read(sthead.size))
         if self.version != 0xDEADFACE:
             raise ValueError('Compiled file of the future!')
         if mtime < self.mtime:
             raise ValueError('Outdated compiled file')
-        self.fortunes = []
-        data = read()
-        add = self.fortunes.append
-        start = 0
-        for i in xrange(self.size):
-            buf = data[start:start+block]
-            if len(buf) < block:
-                break
-            add(entry(buf))
-            start += block
-        if len(self.fortunes) != self.size:
-            raise ValueError("Compiled file wrong length")
-        self.compiled.close()
+    
+    def __load_fortunes(self, entry=stentry.unpack, block=stentry.size):
+        if not hasattr(self, 'fortunes'):
+            read = self.compiled.read
+            self.fortunes = []
+            data = read()
+            add = self.fortunes.append
+            start = 0
+            for i in xrange(self.size):
+                buf = data[start:start+block]
+                if len(buf) < block:
+                    break
+                add(entry(buf))
+                start += block
+            if len(self.fortunes) != self.size:
+                logger.error('%s: Compiled file wrong length', self.compiled_path)
+                if self.compiled_path:
+                    os.unlink(self.compiled_path)
+            self.compiled.close()
     
     def __open_data(self):
         if self.data is None:
             self.data = io.open(self.data_path, 'rb')
     
     def choose(self, long=None, size=160, count=1):
+        self.__load_fortunes()
         if long:
             fortunes = [(o, l) for o, l in self.fortunes if l > size]
         elif long == False:
