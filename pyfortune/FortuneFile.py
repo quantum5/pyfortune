@@ -20,20 +20,25 @@ class FortuneFile(object):
         buf = []
         start = 0
         end = None
+        merge = b'\n'.join
+        addfortune = fortunes.append
+        addtable = table.append
+        addbuf = buf.append
+        tell = data.tell
         for line in data:
             line = line.rstrip(b'\r\n')
             if line == b'%':
-                fortunes.append(b'\n'.join(buf))
+                addfortune(merge(buf))
                 del buf[:]
                 if end is not None:
-                    table.append((start, end - start))
-                start = data.tell()
+                    addtable((start, end - start))
+                start = tell()
             else:
-                buf.append(line)
-                end = data.tell()
+                addbuf(line)
+                end = tell()
         if buf:
-            fortunes.append(b'\n'.join(buf))
-            table.append((start, end - start))
+            addfortune(b'\n'.join(buf))
+            addtable((start, end - start))
         self.size = len(fortunes)
     
     def choose(self, long=None, size=160, count=1):
