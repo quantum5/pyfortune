@@ -49,7 +49,30 @@ def main():
             raise SystemExit
 
         if args.fortunes:
-            chooser = Chooser.fromlist(args.fortunes, offensive=args.offend, equal=args.equal)
+            percentage = False
+            for item in args.fortunes:
+                if item.endswith('%'):
+                    percentage = True
+                    break
+            if percentage:
+                chances = []
+                length = len(args.fortunes)
+                index = 0
+                while index < length:
+                    if args.fortunes[index].endswith('%'):
+                        chance = float(args.fortunes[index][:-1]) / 100
+                        index += 1
+                        try:
+                            file = args.fortunes[index]
+                        except IndexError:
+                            raise SystemExit("%s: Percentage without file!!" % sys.argv[0])
+                        chances.append((file, chance))
+                    else:
+                        chances.append((args.fortunes[index], 0))
+                    index += 1
+                chooser = Chooser.set_chance(chances, offensive=args.offend, equal=args.equal)
+            else:
+                chooser = Chooser.fromlist(args.fortunes, offensive=args.offend, equal=args.equal)
         else:
             chooser = Chooser(offensive=args.offend, equal=args.equal)
         file, choice = chooser.choose(long=args.long, size=args.size)
