@@ -38,19 +38,20 @@ class CompiledFortuneFile(FortuneFile):
         self.fortunes = []
         data = read()
         add = self.fortunes.append
+        start = 0
         for i in xrange(self.size):
-            start = i * block
             buf = data[start:start+block]
             if len(buf) < block:
                 break
             add(entry(buf))
+            start += block
         if len(self.fortunes) != self.size:
-            raise ValueError("Your file doesn't have the same size as it described itself to have")
+            raise ValueError("Compiled file wrong length")
         self.compiled.close()
     
     def __open_data(self):
         if self.data is None:
-            self.data = io.open(self.data_path)
+            self.data = io.open(self.data_path, 'rb')
     
     def choose(self, long=None, size=160, count=1):
         if long:
@@ -68,7 +69,7 @@ class CompiledFortuneFile(FortuneFile):
         data = self.data
         for offset, length in sample:
             data.seek(offset, 0)
-            cookies.append(data.read(length).rstrip('\r\n'))
+            cookies.append(data.read(length).decode('utf-8', 'replace').rstrip('\r\n'))
         return cookies[0] if count == 1 else cookies
     
     def close(self):

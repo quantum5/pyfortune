@@ -27,6 +27,7 @@ class FortuneFile(object):
         for line in data:
             if line[:1] == b'%':
                 length = len(line)
+                a = len(merge(buf))
                 addfortune(merge(buf))
                 del buf[:]
                 end = tell()
@@ -41,14 +42,17 @@ class FortuneFile(object):
     
     def choose(self, long=None, size=160, count=1):
         if long:
-            fortunes = [fortune for fortune in self.fortunes if len(fortune) > size]
+            fortunes = [fortune for fortune in self.fortunes
+                        if len(fortune) > size]
         elif long == False:
-            fortunes = [fortune for fortune in self.fortunes if len(fortune) <= size]
+            fortunes = [fortune for fortune in self.fortunes
+                        if len(fortune) <= size]
         else:
             fortunes = self.fortunes
         if len(fortunes) < count:
             return None
-        sample = [i.decode('utf-8', 'replace') for i in random.sample(fortunes, count)]
+        sample = [i.rstrip('\r\n').decode('utf-8', 'replace')
+                  for i in random.sample(fortunes, count)]
         return sample[0] if count == 1 else sample
     
     def compile(self, file):
