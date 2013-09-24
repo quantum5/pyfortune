@@ -46,6 +46,9 @@ def main():
     if choice is None:
         raise SystemExit("%s: Can't find a fortune!!" % sys.argv[0])
     print(choice)
+    if args.wait:
+        import time
+        time.sleep(max(6, len(choice) / 20))
 
 if __name__ == '__main__':
     main()

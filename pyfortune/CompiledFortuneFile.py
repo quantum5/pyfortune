@@ -3,7 +3,11 @@ from pyfortune.compile import sthead, stentry
 import struct
 import os
 import io
+import sys
 import random
+
+if int(sys.version[0]) > 2:
+    xrange = range
 
 class CompiledFortuneFile(FortuneFile):
     def __init__(self, path):
@@ -24,22 +28,25 @@ class CompiledFortuneFile(FortuneFile):
         self.mtime = 0
         self.__load_compiled()
     
-    def __load_compiled(self):
-        file = self.compiled
-        self.version, self.size, self.flags, mtime = sthead.unpack(file.read(sthead.size))
+    def __load_compiled(self, entry=stentry.unpack, block=stentry.size):
+        read = self.compiled.read
+        self.version, self.size, self.flags, mtime = sthead.unpack(read(sthead.size))
         if self.version != 0xDEADFACE:
             raise ValueError('Compiled file of the future!')
         if mtime < self.mtime:
             raise ValueError('Outdated compiled file')
-        self.fortunes = fortunes = []
-        while True:
-            read = file.read(stentry.size)
-            if not read:
+        self.fortunes = []
+        data = read()
+        add = self.fortunes.append
+        for i in xrange(self.size):
+            start = i * block
+            buf = data[start:start+block]
+            if len(buf) < block:
                 break
-            fortunes.append(stentry.unpack(read))
+            add(entry(buf))
         if len(self.fortunes) != self.size:
             raise ValueError("Your file doesn't have the same size as it described itself to have")
-        file.close()
+        self.compiled.close()
     
     def __open_data(self):
         if self.data is None:
