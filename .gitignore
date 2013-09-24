@@ -33,3 +33,6 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+/pyfortune/data/off/*.ftc
+
+/pyfortune/data/*.ftc
