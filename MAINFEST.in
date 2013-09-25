@@ -1,0 +1,4 @@
+recursive-include pyfortune/data *
+recursive-exclude pyfortune/data *.ftc
+recursive-include pyfortune/data/off *
+recursive-exclude pyfortune/data/off *.ftc
