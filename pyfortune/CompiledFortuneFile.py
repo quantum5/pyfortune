@@ -52,7 +52,11 @@ class CompiledFortuneFile(FortuneFile):
             if len(self.fortunes) != self.size:
                 logger.error('%s: Compiled file wrong length', self.compiled_path)
                 if self.compiled_path:
-                    os.unlink(self.compiled_path)
+                    try:
+                        os.unlink(self.compiled_path)
+                    except OSError:
+                        # Dying here with a pretty message
+                        raise SystemExit('Invalid Compiled File: %s' % self.compiled_path)
             self.compiled.close()
     
     def __open_data(self):
