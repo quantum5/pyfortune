@@ -4,6 +4,7 @@ from pyfortune.CompiledFortuneFile import CompiledFortuneFile
 from pyfortune.path import list_fortune, fortunepath
 from io import open
 from operator import attrgetter
+from bisect import bisect_left
 
 import logging
 import os
@@ -74,6 +75,7 @@ class Chooser(object):
             count += 1 if equal else fortune.size
             files.append((fortune, count))
         self.count = count
+        self.keys = [i[1] for i in self.files]
     
     @classmethod
     def fromlist(cls, files, equal=False, offensive=False):
@@ -91,6 +93,7 @@ class Chooser(object):
         if not fortunes:
             raise ValueError('All fortune files specified are invalid')
         self.count = count
+        self.keys = [i[1] for i in self.files]
         return self
     
     @classmethod
@@ -131,14 +134,14 @@ class Chooser(object):
         for file, chance in file:
             bound += int(chance * count)
             fortunes.append((file, bound))
+        self.keys = [i[1] for i in self.files]
         return self
     
     def choose_file(self):
-        number = random.randrange(self.count)
-        for file, prob in self.files:
-            if prob > number:
-                return file
-        raise RuntimeError('No fortune???')
+        try:
+            return self.files[bisect_left(self.keys, random.randrange(self.count))][0]
+        except IndexError:
+            raise RuntimeError('No fortune???')
     
     def choose(self, long=None, size=160, recurse=0):
         if recurse > 20:
