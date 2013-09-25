@@ -25,7 +25,10 @@ def _load_fortune(file):
             logger.warning("Can't use compiled file: %s: %s", compiled, e)
     fortune = FortuneFile(open(file, 'rb'))
     logging.info('Compiling: %s', file)
-    fortune.compile(open(compiled, 'wb'))
+    try:
+        fortune.compile(open(compiled, 'wb'))
+    except IOError:
+        logger.info('Unable to compile file: %s', file)
     return fortune
 
 def load_fortune(file, path=None, offensive=False):

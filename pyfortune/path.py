@@ -35,11 +35,11 @@ add_if_exist(fortunepath, userdata)
 if os.name == 'nt':
     add_if_exist(fortunepath, os.path.join(get_all_user_data(), 'fortunes'))
 else:
-    add_if_exist(fortunepath, '/usr/local/share/fortunes')
-    add_if_exist(fortunepath, '/usr/local/share/games/fortunes')
-    add_if_exist(fortunepath, '/usr/share/fortunes')
-    add_if_exist(fortunepath, '/usr/share/games/fortunes')
+    add_if_exist(fortunepath, '/usr/local/share/pyfortunes')
 add_if_exist(fortunepath, os.path.join(os.path.dirname(__file__), 'data'))
+# I will skip over the /usr fortunes because that what the distro comes with
+# not what I came with. When you are not root it's hard to compile them.
+# If you really want pyfortune to access them, use symlinks
 
 def mkdir(path):
     try:
@@ -51,6 +51,7 @@ def mkdir(path):
 
 def list_fortune(offensive=False, path=fortunepath, refile=re.compile(r'^[^\.]+$')):
     files = []
+    added = set()
     def isfile(dir, file):
         if refile.match(file) is None:
             return
@@ -63,8 +64,9 @@ def list_fortune(offensive=False, path=fortunepath, refile=re.compile(r'^[^\.]+$
         for dir in path:
             for file in os.listdir(dir):
                 file = isfile(dir, file)
-                if file is not None:
+                if file is not None and file not in added:
                     files.append(file)
+                    added.add(file)
     if offensive != False:
         for dir in path:
             dir = os.path.join(dir, 'off')
@@ -72,6 +74,8 @@ def list_fortune(offensive=False, path=fortunepath, refile=re.compile(r'^[^\.]+$
                 continue
             for file in os.listdir(dir):
                 file = isfile(dir, file)
-                if file is not None:
+                id = 'off/%s' % file
+                if file is not None and id not in added:
                     files.append(file)
+                    added.add(id)
     return files
