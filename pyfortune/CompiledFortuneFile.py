@@ -2,7 +2,6 @@ from pyfortune.FortuneFile import FortuneFile
 from pyfortune.compile import sthead, stentry
 import struct
 import os
-import io
 import sys
 import random
 
@@ -14,7 +13,7 @@ class CompiledFortuneFile(FortuneFile):
         self.compiled_path = path
         self.data_path = os.path.splitext(path)[0]
         self.data = None
-        self.compiled = io.open(path, 'rb')
+        self.compiled = open(path, 'rb')
         self.mtime = int(os.path.getmtime(self.data_path))
         self.__load_compiled()
     
@@ -61,7 +60,7 @@ class CompiledFortuneFile(FortuneFile):
     
     def __open_data(self):
         if self.data is None:
-            self.data = io.open(self.data_path, 'rb')
+            self.data = open(self.data_path, 'rb')
     
     def choose(self, long=None, size=160, count=1):
         self.__load_fortunes()

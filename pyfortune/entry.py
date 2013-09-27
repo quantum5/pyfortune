@@ -58,6 +58,10 @@ is equivalent to
     parser.add_argument('-l', '--long', action='store_const', dest='long', const=True,
                         help='Show all fortune cookie that are above the length '
                              'specified in -n')
+    parser.add_argument('-L', '--language', action='store', dest='lang',
+                        help='Display fortunes cookies from a specific language')
+    parser.add_argument('-x', '--exclusive', action='store_false', dest='include',
+                        help='Exclude the default fortune set, only the set language is shown')
     parser.add_argument('-s', '--short', action='store_const', dest='long', const=False,
                         help='Show all fortune cookie that are under the length '
                              'specified in -n')
@@ -102,17 +106,21 @@ is equivalent to
                     else:
                         chances.append((args.fortunes[index], 0))
                     index += 1
-                chooser = Chooser.set_chance(chances, offensive=args.offend, equal=args.equal)
+                chooser = Chooser.set_chance(chances, offensive=args.offend, equal=args.equal, lang=args.lang)
             else:
-                chooser = Chooser.fromlist(args.fortunes, offensive=args.offend, equal=args.equal)
+                chooser = Chooser.fromlist(args.fortunes, offensive=args.offend, equal=args.equal, lang=args.lang)
         else:
-            chooser = Chooser(offensive=args.offend, equal=args.equal)
+            chooser = Chooser(offensive=args.offend, equal=args.equal, lang=args.lang, include=args.include)
         file, choice = chooser.choose(long=args.long, size=args.size)
         if choice is None:
             raise SystemExit("%s: Can't find a fortune!!" % sys.argv[0])
         if args.show_file:
             print(file, file=sys.stderr)
-        print(choice)
+        try:
+            print(choice)
+        except IOError:
+            print() # This just happens on windows for no reason, when there are
+                    # "special" characters and no new line is printed
         if args.wait:
             try:
                 import time

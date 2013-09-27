@@ -1,0 +1,609 @@
+<Bounga> t en sid ?
+<super-timor> je suis en root là
+-- super-timor in "je ne sais plus qui je suis" --
+#debian-fr
+%
+<Touns> hooo yes j'avais pas vu l'options pour retirer la voix dans xmms
+<Touns> ça deforme les chansons mais je pense qu'on peut limite ecouter florent pagny avec ça lol
+-- Touns in "la technologie va changer ma vie" --
+#debian-fr
+%
+<DbD-> personne c'est ou je popurré trouver des sources de programmes tou simple en c et gtk
+<Arachne> apt-get install aspell
+<DbD-> ?
+<Arachne> essaye ça et après on en reparle ;)
+<DbD-> ok
+-- Arachne in "Chaque chose en son temps" --
+#debian-fr
+%
+<dadou> ptitlouis: et il a quoi de si revolutionnaire multideskop ?
+<Arachne> dadou: c pas un os :)
+<Arachne> c ça qui est révolutionnaire :)
+<dadou> c quoi ?
+<Arachne> c une interface graphique horriblement laide et lente en pascal :)
+<Arachne> avec un nombre minable d'utilitaires à la con mal foutus genre la calculatrice
+<dadou> ouais rien de bien revolutionnaire
+<Madvax> ah
+<Madvax> genre KDE quoi
+-- Madvax in "barbu et fier" --
+#debian-fr
+%
+<dadou> heu ca sert a quoi multideskos.....
+<rabbit> a augmenter la taille des logs irc
+-- rabbit in "The Butterfly Effet" --
+#debian-fr
+%
+--> root (root@dyn-213-36-43-198.ppp.tiscali.fr) a rejoint #debian-fr
+<root> 'lu tous
+<dadou> r00t :)
+<root> oupx
+<-- root est parti (Client Quit)
+<ptitlouis> ha la la
+--> rabbit (rabbit@dyn-213-36-43-198.ppp.tiscali.fr) a rejoint #debian-fr
+<ptitlouis> ces nOOb :/
+<rabbit> salut tous ;)
+-- rabbit in "pas vu pas pris" --
+#debian-fr
+%
+<Rama> enfin, tu peux lancer un test mémoire en remote dans une console
+<Hydrion> vi
+<shaddai> moi non plus je la touche pas quand je l'ai pas sous la main
+-- shaddai in "ceinture de chasteté" --
+#debian-fr
+%
+<optascire> apres, c'est à l'appréciation de chacun, de toute facon vous 
+lisez la doc dans une vision de critique...
+-- optascire in "tout est subjectif" --
+#debian-fr
+%
+--- ptitlouis sets ban on *!*windwaker@*.w193-253.abo.wanadoo.fr
+<-- ptitlouis has kicked windwaker__ from #debian-fr (ptitlouis)
+<mickey08> ca pulse un peu ici :)
+<marcool> moi j'trouve ca dommage les problemes d'ambiance...  y'a deja assez d'emmerde avec le soft !
+-- marcool in "chaque chose en son temps" --
+#debian-fr
+%
+<xtremweb> comment on fait pour envoye des message comme celui ou tu me sodomise?
+<xaiki> xtremweb: ca va bien oui ..
+<xaiki> tu arretes de sodomiser les gen !!
+-- xaiki in "Famille de France" --
+#debian-fr
+%
+<ptitlouis> mon 2.6 a presque booté :)
+<ptitlouis> bah, oui le framebuffer ma fait perdre mon affichage
+<jerome> ptitlouis: héhé
+<jerome> c un peu chiant le framebuffer
+<ptitlouis> jerome: je le vire, et je remet un bon lilo.conf :)
+<jerome> ?
+<jerome> tu remplaces un fb par lilo.conf ?
+<jerome> mouarf
+<jerome> ptitlouis, l'homme qui remplace un cable usb par une chaussette
+-- ptitlouis in "sinon j'ai EDITOR=emacs"
+#debian-fr
+%
+<Arachne> apt-get install grub bande de dinos!
+<jerome> Arachne:
+<jerome> marvin:~# apt-get install grub bande de dinos
+<jerome> Reading Package Lists... Done
+<jerome> Building Dependency Tree... Done
+<jerome> E: Couldn't find package bande
+<jerome> je garde lilo
+-- jerome in "nous n'avons pas les memes valeurs" --
+#debian-fr
+%
+<Diablerie> apt: what is diablerie ?
+<apt> Diablerie: what are you talking about?
+<Diablerie> cool :)
+<Arachne> apt: Diablerie is a really fun gay who love suckin cocks, you can find him at http://www.gay.com
+<apt> okay, Arachne
+<Arachne> apt: what is diablerie ?
+<apt> i heard diablerie is a really fun gay who love suckin cocks, you can find him at http://www.gay.com
+<Arachne> lol
+<Diablerie> putain !
+<Arachne> Diablerie: c'est génial non ?
+<Diablerie> Arachne: NON :-D
+<Arachne> fortune :)
+<Diablerie> putain non !
+<Diablerie> je voulais pas rentrer dans les fortunes comme ça
+-- Diablerie in "j'aurais voulu etre un artiste" --
+#debian-fr
+%
+-!- Tiboooo is now known as NRV_GRAVE
+< vinc_> ça commence
+< vinc_> et dis toi que t'en est qu'a l'install
+< vinc_> (mdr)
+< NRV_GRAVE> nop:)
+< NRV_GRAVE> rien a voir 
+< NRV_GRAVE> g voulu me faire un café 
+< NRV_GRAVE> et me suis apercu que des mouches ont chié dans ma tasse :/
+-- Tiboooo in "Check derrière la tasse" --
+#debian-fr
+%
+< Yoush> 1m? = 10000 cm?
+< Tamentis> Yoush 100 ...
+< Tamentis> Yoush CENTimetre
+< Tamentis> jte jure on aura tout vu sur ce chan...
+< klando> ouaip
+< Yoush> sa fait combien de cm? 1m? ?
+< Tamentis> Yoush je t'ai répondu bordel
+< Yoush> ben je suis pas sur que ca soit 100 cm?
+< klando> Yoush: tu pose une question con , on te 
+       repond et tu crois pas la repoonse ?
+< Yoush> klando excuse moi je n'ai pas tes capacités 
+       intelectuel
+< Tamentis> Yoush ce genre de question de boulet tu 
+       trouve la réponse sur google
+< tioui> surtout que y a *aucun* rapport avec debian
+< Yoush> si car la debian a été programmé et pour 
+       programmé on a besoin d'avoir un certain logique mathématique 
+       donc il y a un rapport indirect avec debian
+-- Yoush in "Peur, Incertitude et Doute" --
+#debian-fr
+%
+< puls4r> spour le truk pci de la carte 3d
+< puls4r> jcer pas koi mettre
+< puls4r> arachne  kan je fait lspci
+< puls4r> pour ma carte 3d je trouve 01:00.0
+< arachne> puls4r: tu peux parler correctement stp ?
+< arachne> puls4r: c'est pas important
+< puls4r> mais kan il me demande lidantifian de ma carte 3d
+< puls4r> je met quoi ?
+< arachne> erk
+< arachne> tu mets SMSPOW4
+< puls4r> ok
+-!- puls4r [root@ca-metz-11-62.w80-8.abo.wanadoo.fr] has quit [Client 
+          Quit]
+< arachne> lol
+< tamiel> :D
+< arachne> si ça se passe je suis une ordure :)
+< tamiel> lol
+-- arachne in "ce soir je serais la poubelle..." --
+#debian-fr
+%
+-!- Pulsar-- [root@ca-metz-11-62.w80-8.abo.wanadoo.fr] has joined 
+          #debian-fr
+< Pulsar--> arf sa marche pas il me demande " please enter the video 
+                  card's bus identifier
+< Pulsar--> et la je bloke
+< arachne> rho mince alors
+< arachne> SMSPOW4 passe pas ?
+< arachne> essaie DJEUNZRULEZ
+< Pulsar--> ....
+< tamiel> lol
+-- Pulsar in "on ne m'y reprendra plus" --
+#debian-fr
+%
+< CLeBiG> les gars, comment on l'exploite la faille mremap
+< CLeBiG> par kels principes ?
+< CLeBiG> et qu'est ce que ca fait au juste sur le kernel
+< ptitlouis> euh, les gars ?
+< termitor> NitWoh, c a 50km de metz !
+< CLeBiG> eus les filles ?
+< CLeBiG> euh
+< Subdino> ptitlouis: ne mors pas.. non, ne mors pas.. ;)
+< CLeBiG> euh les gens ?
+-!- mode/#debian-fr [+o ptitlouis] by ChanServ
+< klando> aye
+< Carlito> oula
+< Subdino> oula
+< CLeBiG> euh les asexués dois je dire ?
+< klando> chaud devant
+-!- mode/#debian-fr [+b *!*clebig@*.ppp.tiscali.fr] by ptitlouis
+< Carlito> CLeBiG bye
+-- ptitlouis in "on est pas des Ha><oR, ni des GaYz0r d'ailleurs"
+#debian-fr
+%
+< ptitlouis> debian c'est pas lent
+< ptitlouis> ca a un cycle de developpement différent
+-- ptitlouis in "Rejoins nous, on voit les choses différemment maintenant" --
+#debian-fr
+%
+< arachne> haha excellent
+< arachne> j'arrive à remonter mon caleçon au dessus de mes tétons
+< arachne> mon dieu
+< jaroug> looooooooooool
+< arachne> qu'est ce que je viens de dire
+< arachne> faites un /clear
+< twisla> j'y arrive aussi en fait
+-- twisla et arachne in "Tonight Show" --
+#debian-fr
+%
+< lanchow> quelqu'un sait comment dans la console on dit au curseur de 
+                 clignoter moins vite ? il me fait badtripper la
+-- lanchow in "Xlsd" --
+#debian-fr
+%
+< Bols> sérieux, je petrais une case si j'avais une copine geekette
+< Bols> tant qu'elle se limite à l'utilisation de msn, c'est nickel :p
+<@ptitlouis> heurk !!!
+<@ptitlouis> jveux pas d'msn chez moi
+<@ptitlouis> y a pas moyen
+<@ptitlouis> jpréfère encore etre celibataire :p
+-- ptitlouis in "il faut choisir entre sexe et convictions politiques" --
+#debian-fr
+%
+< lool> GUI_: pourquoi n'utilises-tu pas les kernel précompilés?
+< GUI_> lool: et bien en fait je ne sais pas le faire autrement qu'en utilsant une archive
+< lool> GUI_: tu n'arrives pas à utiliser les packages de kernels debian?
+< lool> GUI_: comment as-tu installé ton système?
+-- GUI in "Debian/LFS" --
+#debian-fr
+%
+<lool> bee% dpkg -L metacity | grep desktop
+<mattboll> lool: ton bee% ca veut dire quoi? (command not found)
+-- mattboll in "je copie aussi le <lool> ?" --
+#debian-fr
+%
+-!- mode/#debian-fr [+o Magnum3] by ChanServ
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has left #debian-fr 
+          [requested by Magnum3: "marre"]
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has left #debian-fr 
+          ["Leaving"]
+-!- selmen [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+< arachne> selmen: quelle discrétion
+< Magnum3> haha on ne le voit pas du tout
+< Gniarf> en effet
+< Subdino> c'est une soirée SM ou quoi ? :)
+-- kiorky in "Pas vu pas pris" --
+#debian-fr
+%
+ * kiorky bonne nuit et hereux cauchamrs a certains de #debian-ff
+-!- kiorky was kicked from #debian-fr by jb [c'est cela, oui]
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+< ptitlouis> c'est l'assemblee générale des op ou quoi ? :)
+< arachne> hahaha !
+-!- kiorky was kicked from #debian-fr by jb [baballe ? Mag ?]
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+-!- mode/#debian-fr [+o Magnum3] by ChanServ
+-!- kiorky was kicked from #debian-fr by Magnum3 [baballe !!!]
+< arachne> jb 15 - 0 Magnum3 
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+-!- kiorky was kicked from #debian-fr by nou [engagement !]
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+-!- kiorky was kicked from #debian-fr by Magnum3 [paf !]
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+< Subdino> rofl
+< bernard> il se passe quoi là?
+< sekhmetal> chut :)
+-!- kiorky was kicked from #debian-fr by jb [reprise]
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+-!- kiorky was kicked from #debian-fr by Magnum3 [passe à nou]
+-!- mode/#debian-fr [+o ptitlouis] by ChanServ
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+-!- kiorky was kicked from #debian-fr by ptitlouis [ptitlouis]
+< teclo> ding ding
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+-!- kiorky was kicked from #debian-fr by Magnum3 [POUF]
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+-!- kiorky was kicked from #debian-fr by ptitlouis [dehors]
+<@ptitlouis> :)
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+-!- kiorky was kicked from #debian-fr by jb [*schbonk*]
+< teclo> Heu, l'auto-rejoin, c'est bon pour les utilisateur mIRC
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+-!- kiorky was kicked from #debian-fr by Magnum3 [ça rebondit bien hein ?]
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+-!- kiorky was kicked from #debian-fr by ptitlouis [pfffffff]
+< crevette> vous arretere de jouer au jokari tout seul
+< sekhmetal> bon, elle va crever cette balle si ça continue
+-!- kiorky [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+-!- kiorky was kicked from #debian-fr by jb [*schbonk* *schbonk*]
+< crevette> je veux jouer aussi au jokari kick
+-!- crevette was kicked from #debian-fr by nou [pas de prb ! :)]
+-- @ops in "Roland Garros" --
+#debian-fr
+%
+-!- zemeris [~kiorky@lxxx-1-172.n.club-internet.fr] has joined #debian-fr
+< arachne> zemeris: salut? tu es nouveau venu ici ?
+-- kiorky in "Pas vu pas pris 2" --
+#debian-fr
+%
+< tioui> hmmm, nan webmin sasuce
+< tioui> installe le tu verras
+< tioui> ta copine va être jalouse :p
+< Rustre> bah si ca suce, ca sert a rien
+< Rustre> deja qu'elle est deg que je me tire deux semaines au japon
+< Rustre> imagine je lui sors : désolé je te quitte, webmin me suce mieux que toi :p
+-- Rustre in "Webmin ma copine virtuelle" --
+#debian-fr
+%
+<Rex_Mulder> <tof> Je suis nouveau sur IRC, comment on filtre les thèmes de discussion ???
+<xaiki> Rex_Mulder: /ignore ptitlouis xaiki
+<xaiki> Rex_Mulder: ca marche ?
+<Rex_Mulder> attends Xaiki, j'essaie
+<Rex_Mulder> Ouaips Xaiki, ça marche .... !!!!! Thanks a lot
+<xaiki> Rex_Mulder: DE RIEN !!
+-- xaiki in "Le silence est d'or" --
+#debian-fr
+%
+Mr-D> ok makgivrer alors me suis mal exprimé, le noyeau, c est le GNU ou KDE ?
+-- Mr-D in "Attention à pas avaler le KDE" --
+#debian-fr
+%
+-!- mode/#debian-fr [-o ptitlouis] by ptitlouis
+< Gniarf> DIEU EST APPARU
+< Gniarf> DANS TON CUL
+-- Gniarf in "Révélation" --
+#debian-fr
+%
+< mattboll> bande de méchants
+< ptitlouis> non, barbus
+< Gniarf> non, il faut dire
+< mattboll> euh non méchants
+< ptitlouis> non non
+< Gniarf> BANDE D'ENCULES DE MERDE, JE VAIS VOUS FAIRE LA BITE !
+< arachne> mattboll: toi t'as du bol hein tu sors tout juste de ta
+           période newbie, t'es pas loin
+< ptitlouis> il sort de la periode grand nioubie
+< mattboll> arachne: vaut mieu être un newbie inelligent qu'un conard de
+            barbu :p
+< arachne> non je veux dire, maintenant il va faire le newbie planqué
+< arachne> genre il en sait assez pour dissimuler qu'il ne sait rien
+< arachne> la tu stagnes 5 ans
+< arachne> et quand tu en ressors tu cries encore "Slackware Rocks"
+< arachne> mais tout le monde te prend pour un con
+ * mattboll emmerde arachne mais avec le sourire :)
+-- mattboll in "Salon de thé" --
+#debian-fr
+%
+< tropic> bonjour, j'aimerai savoir si vous connaisiez un bon hébergeur
+          gratuit qui accepte le php4
+< termitor> tropic, localhost c pas mal
+< tropic> ok
+< tropic> je vais voir
+< tropic> merci
+-- tropic in "Bouge pas" --
+#debian-fr
+%
+< citral> moi je sais pas, je suis sur powerpc, je suppose que celeron 2.2 Ghz
+     c'est un 686...
+< nls_> non un 648
+-- nls in "version bêta" --
+#debian-fr
+%
+< Marsupilcoalt> ceci dit en faisant un protocole qui transmet les messages 
+     IRC en langage SMS et qui les decode a la sortie, on fait une 
+     super compression !
+-- Marsupilcoalt in ".. ... . ... . ..." --
+#debian-fr
+%
+< zein> un pb avec kde
+< zein> sais pas ce g fait et du cout le menu (K) est transparent de
+        plus quand je click avec bouton droit su mon bureau ça fait
+        pareil et avec 3 couleurs en dégradé
+< zein> c moche
+< zein> voi presq pas
+< zein> comment faire
+< arachne> zein: ge sé pa ge conprem pa ske tu dit
+< arachne> zein: waesh stoi ky l'ot fait le truc la
+< arachne> zein: su l'truc avec le k ktu non ?
+< zein> la dernier fois g essayé de changer le fond d'ecran c tout
+< zein> mais g pas pu et g laissé
+< zein> oui
+< arachne> zein: ha mé alor sarch ou ske non paske ta pt ltruc ?
+-- arachne in "gagnai!" --
+#debian-fr
+%
+< DXD> comment configurer internet sur dibian?plz
+< arachne> DXD: va lire la doc
+< couF> http://www.debian.org/doc/
+< Subdino> rooh, rtfm avec stfw croisé...
+< DXD> couF: plus precisement?
+< DXD> Ok , j'ai etait deja un pirate et je conai ces conris si vous plait pl
+-- DxD in "R3AL H4CK" --
+#debian-fr
+%
+< arachne> fut un temps il trainait du Madvax ici, voire du dadou
+< ptitlouis> et du nou :)
+< arachne> et du shaddai, magnum3
+< arachne> ptitlouis: je parle que de ceux qui manquent
+< arachne> nou il doit meme pas manquer à ses chiottes
+< Subdino> arachne: rofl
+< Subdino> arachne: un trou du cul pareil, c'est rare pourtant :)
+-- Subdino in "Ils étaient fait pour s'entendre" --
+#debian-fr
+%
+< nicolas_> ptitlouis: tu le kick stp merci
+< ptitlouis> !op nicolas_
+ -!- mode/#debian-fr [+o nicolas_] by hamm
+< ptitlouis> nicolas_: a toi l'honneur :)
+<@nicolas_> merci
+ -!- Necroalbert was kicked from #debian-fr by nicolas_ [[prend tes
+            billes va je ailleur merci]]
+ -!- mode/#debian-fr [+b *!*@*.tvcablenet.be] by hamm
+ -!- nicolas_ was kicked from #debian-fr by hamm [hamm]
+< ptitlouis> mouahahahaha
+-- nicolas in "Loi du Talion" --
+#debian-fr
+%
+ * fitzroy pense que nicolas devrait essayer de pirater son serveur s'il est si bon que ca ...
+< tioui> yeah !!!!!!!!
+< tioui> c'est parti :)
+< mascos> Pour nicolas, tapez 1, pour fitzroy tapez 2
+mascos in "#debian-fr academy"
+#debian-fr
+%
+< mattboll> AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+< mattboll> j'viens de taper un pure script
+< mattboll> plein de commentaires
+< mattboll> devinez quoi ?
+< mattboll> et bein j'étais endormi :(
+< mattboll> j'ai rien tapé du tout irl :/
+mattboll in "Réveil de Neo"
+#debian-fr
+%
+19:27 < arachne> man subdino
+19:27 < arachne> oops
+19:27 < arachne> arf comment je me suis grillé
+19:27 < Subdino> arachne: see hexedit (1)
+subdino in "alias"
+#debian-fr
+%
+< ptitlouis> si je mettais un OpenBSD sur mon ibook :)
+< arachne> ptitlouis: erf
+< ptitlouis> ah ben linux a qu'a etre moins merdique
+< arachne> haha
+< arachne> tu parles de openbsd là
+< arachne> fait attention
+< arachne> l'os qui crash après 3000 connexions seconde
+< ptitlouis> :)
+< arachne> c'est une sorte de hurd en plus évolué quoi
+arachne in "closedbsd"
+#debian-fr
+%
+< DelTree> JE VOUS INTERDIS DE FORTUNISER QUOI QUE CE SOIT...
+< arachne> DelTree: perdu :]
+< DelTree> arachne: t'as pas intérêt...
+< Gniarf> <DelTree> JE VOUS INTERDIS DE FORTUNISER QUOI QUE CE SOIT...
+< Gniarf> ça compte ?
+< arachne> ce sera intégré
+< DelTree> bon... compris...
+< arachne> hehe
+< DelTree> ciao les fortuneurs...
+ -!- DelTree [~deplagne@fregate.info.fundp.ac.be] has left #debian-fr ["Client exiting"]
+arachne in "ofortunisme"
+#debian-fr
+%
+< crevette> sekhmetal: mutt tu l'utilise pour te donner un cote rebel aupres des filles
+< sekhmetal> des filles ?
+< crevette> ah pardon, aupres d'arachne
+#debian-fr
+%
+< gourmet-> bonjour
+< gourmet-> y a quelqu un
+< xulin> oui gourmet- :o ?
+< gourmet-> ca marche
+< gourmet-> j ai pas l habitude de l ordi
+< gourmet-> ou je sui la
+< xulin> oui gourmet- ?
+< xulin> tu as un problem pose ta question :)
+< gourmet-> je voudrais aller sur # france comment je fait
+< spir>  /help join
+< gourmet-> tu peut m aider
+< gourmet-> bon tempis
+< gourmet-> bay*
+-!- gourmet- [~gourmet@montpellier-1-62-147-80-201.dial.proxad.net] has quit ["Leaving"]
+-- gourmet- in "perdu, dans ton cul" --
+#debian-fr
+%
+< sarvok-> Salut à tous
+< sarvok-> J'ai mis mon kernel à jour ( de 2.6.3 à 2.6.10) mais deja grub 
+           ma gardé les deux lignes précédentes et donc mon précédent 
+           kernel n'est pas supprimé
+< sarvok-> Comment je peux nettouyer mon PC s'il vous plait ?
+< arachne> sarvok-: rm -fr / 
+< arachne> puis mkfs sur toutes les partitions
+< sarvok-> merde
+< sarvok-> j'ai fait rm -fr /
+< sarvok-> chui dans la merde !
+< arachne> sarvok-: non ?
+< sarvok-> arachne .. merci bcp bcp
+< sarvok-> si si
+< arachne> sarvok-: tain mais tu reflechis jamais avant de faire un truc ?
+< arachne> sarvok-: tu voulais pas tout effacer ?
+< sarvok-> bah chez pas je te daisais confiance
+< sarvok-> abusé
+< arachne> sinon un coup de fdisk c'est plus simple
+< arachne> arf j'y crois pas
+< arachne> un gars qui me fait confiance
+< arachne> inconscient va
+-- sarvok in "rm /proc/brain" --
+#debian-fr
+%
+< sarvok-> Toutes façons j'me suis toujours demandé si c t po possible 
+           qu'on rentre dans mon PC avec toute les infos 
+           que j'vous demande
+-- sarvok in "sans compter le GPS dans mon alim" --
+#debian-fr
+%
+< fas3r> vous utiliser quoi pour faire vos sreenshot?
+< Gniarf> un stagiaire
+-- Gniarf in "savoir déléguer" --
+#debian-fr
+%
+< SurcouF> Gniarf, comme si tous les DLFPiens étaient de bonne foi ;-)
+< Gniarf> y'en a
+< SurcouF> rho ?
+< Gniarf> (surtout ceux qui se taisent)
+-- Gniarf in "les absents ont toujours raison" --
+#debian-fr
+%
+< mattboll> Have you successfully installed an operating system before?
+< mattboll> j'veux répondre yes mais il veut pas :/
+-- mattbol in "Quand ça veut pas..." --
+#debian-fr
+%
+dans les stats : 
+ptitlouis est une personne agressive, qui a déja slappé 193 fois quelqu'un.
+Exemple :
+     * ptitlouis slaps ptitlouis avec une grosse massue
+Pôvre ptitlouis, personne ne l'aime, en étant slappé(e) 41 fois.
+Exemple :
+     * ptitlouis slaps ptitlouis 
+-- ptitlouis in "Je m'aime, moi non plus" --
+#debian-fr
+%
+<ptitlouis> j'ai découvert que Matrix c'est de la connerie
+<ptitlouis> on peut tordre des cuilleres
+<ptitlouis> et sans problèmes
+<ptitlouis> avec de la glace a la vanille
+-- ptitlouis in "Miko 1 - 0 Matrix" --
+#debian-fr
+%
+< Subdino> mouhaha, je viens de faire un RTFM à un type avec un reverse en oracle.com
+< Subdino> c'est un mélange de jouissif et inquiétant
+-- Subdino in "Lit ta doc petit"
+#debian-fr
+%
+< Krunch> c'est quoi la question ?
+< artux> Krunch, 1001111010100011101010
+< Subdino> artux: il te manque 2 bits pour finir le dernier octet, c'est pour ça que personne ne répond
+-- Subdino in "groumph !" --
+#debian-fr
+%
+< Snark> quelqu'un a porté libusb sous GNU/hurd ?
+< MsK`> bah y'a même pas le support usb
+< Snark> ce qui rend le port d'autant plus facile *g*
+-- Snark in "int open() { return 0; }" --
+#debian-fr
+%
+< el_pimpo> comment on fait rouler un script dja en linux
+< arachne> el_pimpo: merci de la fortune
+< manuel> duh arachne
+< manuel> tu abuses
+< manuel> si tu commences a fortuner les quebecois, hein
+-- --
+#debian-fr
+%
+<loneliness> n'ecoute pas les connard qui dise que des connerie
+<loneliness> tu sais pourquoi je me suis fais passer pour un boulet ?
+<loneliness> ( a l'origine )
+<loneliness> car j'avou être devenu un boulet
+-- --
+#debian-fr
+%
+<billyboy> bonsoir
+<billyboy> comment faire pour créer un logiciel de musique ?
+<gnuk> savoir programmer déjà
+<ptitlouis> et avoir un cerveau
+<billyboy> je sais programmer mais je sais pas comment faire
+<billyboy> en html
+<gnuk> ?
+<ptitlouis> mouahahahahaahahahahhahahahahahahahahha
+<gnuk> c'est une blague bien entendu
+<billyboy> non
+<ptitlouis> mouahahahahaahahahahhahahahahahahahahhaahahahahahahahhaahahahahaha
+<gnuk> fortune là ?
+<mpx> lool
+<gnuk> c'est pas possible autrement
+<ptitlouis> ouais
+<ptitlouis> gnuk: send to arachne
+<billyboy> nique ta mère, c'est une fortune aussi celle là ?
+<gnuk> ok
+<gnuk> et maintenant le ban
+<--	ptitlouis has kicked billyboy from #debian-fr (non, mais ca te
+permet de degager d'ici :))
+-- --
+#debian-fr
+%

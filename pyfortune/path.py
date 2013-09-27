@@ -1,6 +1,8 @@
 import os
 import re
+import logging
 
+logger = logging.getLogger('pyfortune')
 userdata = (os.path.expanduser('~/.pyfortune') if os.name != 'nt' else
             os.path.expandvars('%APPDATA%/PyFortune'))
 userdata = os.path.normpath(userdata)
@@ -49,7 +51,8 @@ def mkdir(path):
         if e.errno != errno.EEXIST or not os.path.isdir(path):
             raise
 
-def list_fortune(offensive=False, path=fortunepath, refile=re.compile(r'^[^\.]+$')):
+def list_fortune(offensive=False, path=fortunepath, lang=None, include=False,
+                 refile=re.compile(r'^[^\.]+$')):
     files = []
     added = set()
     def isfile(dir, file):
@@ -59,14 +62,20 @@ def list_fortune(offensive=False, path=fortunepath, refile=re.compile(r'^[^\.]+$
         if os.path.isfile(file):
             return file
 
+    if lang is not None:
+        oldpath = path
+        path = [os.path.join(dir, lang) for dir in oldpath]
     # Offensive = None means both, False means no offensive, True means offensive only
     if not offensive:
         for dir in path:
-            for file in os.listdir(dir):
-                file = isfile(dir, file)
-                if file is not None and file not in added:
-                    files.append(file)
-                    added.add(file)
+            try:
+                for file in os.listdir(dir):
+                    file = isfile(dir, file)
+                    if file is not None and file not in added:
+                        files.append(file)
+                        added.add(file)
+            except OSError as e:
+                logger.error("Can't enumerate directory: %s: %s", dir, e.strerror)
     if offensive != False:
         for dir in path:
             dir = os.path.join(dir, 'off')
@@ -78,4 +87,7 @@ def list_fortune(offensive=False, path=fortunepath, refile=re.compile(r'^[^\.]+$
                 if file is not None and id not in added:
                     files.append(file)
                     added.add(id)
+    if lang is not None and include:
+        # Include the default set
+        files.extend(list_fortune(offensive, oldpath))
     return files

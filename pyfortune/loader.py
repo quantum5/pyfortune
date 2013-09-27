@@ -2,9 +2,9 @@ from __future__ import division
 from pyfortune.FortuneFile import FortuneFile
 from pyfortune.CompiledFortuneFile import CompiledFortuneFile
 from pyfortune.path import list_fortune, fortunepath
-from io import open
 from operator import attrgetter
 from bisect import bisect_left
+from io import open
 
 import logging
 import os
@@ -32,7 +32,7 @@ def _load_fortune(file):
         logger.info('Unable to compile file: %s', file)
     return fortune
 
-def load_fortune(file, path=None, offensive=False):
+def load_fortune(file, path=None, offensive=False, lang=None):
     if os.path.isabs(file):
         return _load_fortune(file)
     if path is None:
@@ -40,6 +40,11 @@ def load_fortune(file, path=None, offensive=False):
     else:
         path = path[:]
         path.extend(fortunepath)
+    if lang is not None:
+        oldpath = path
+        path = path[:]
+        path.extend(os.path.join(dir, lang) for dir in oldpath)
+        del oldpath
     for dir in path:
         if offensive:
             test = os.path.join(dir, 'off', file)
@@ -52,16 +57,18 @@ def load_fortune(file, path=None, offensive=False):
             if os.path.isfile(test):
                 return _load_fortune(test)
 
-def load_all(offensive=False, path=None):
+def load_all(offensive=False, path=None, lang=None, include=False):
     if path is None:
         path = fortunepath
     else:
+        path = path[:]
         path.extend(fortunepath)
-    for file in list_fortune(offensive, path):
+    for file in list_fortune(offensive, path, lang, include):
         yield _load_fortune(file)
 
 class Chooser(object):
-    def __init__(self, offensive=None, path=None, equal=False):
+    def __init__(self, offensive=None, path=None, equal=False,
+                 lang=None, include=False):
         """Initialize based on all available fortune files"""
         # Let me explain:
         # files is a list of tuples (fortune, upper bound)
@@ -71,20 +78,20 @@ class Chooser(object):
         # increases
         self.files = files = []
         count = 0
-        for fortune in load_all(offensive, path):
+        for fortune in load_all(offensive, path, lang, include):
             count += 1 if equal else fortune.size
             files.append((fortune, count))
         self.count = count
         self.keys = [i[1] for i in self.files]
     
     @classmethod
-    def fromlist(cls, files, equal=False, offensive=False):
+    def fromlist(cls, files, equal=False, offensive=False, lang=None):
         """Initialize based on a list of fortune files"""
         self = cls.__new__(cls)
         self.files = fortunes = []
         count = 0
         for file in files:
-            fortune = load_fortune(file, offensive=offensive)
+            fortune = load_fortune(file, offensive=offensive, lang=lang)
             if fortune is None:
                 logger.warn("Can't load: %s", file)
                 continue
@@ -97,7 +104,7 @@ class Chooser(object):
         return self
     
     @classmethod
-    def set_chance(cls, files, equal=False, offensive=False): # where files are (name, chance)
+    def set_chance(cls, files, equal=False, offensive=False, lang=None): # where files are (name, chance)
         """Initialize based on a list of fortune files with set chances"""
         self = cls.__new__(cls)
         total = 0.
@@ -106,7 +113,7 @@ class Chooser(object):
         for name, chance in files:
             if total >= 1:
                 break
-            fortune = load_fortune(name, offensive=offensive)
+            fortune = load_fortune(name, offensive=offensive, lang=lang)
             if fortune is None or not fortune.size:
                 continue
             if chance:
@@ -138,6 +145,8 @@ class Chooser(object):
         return self
     
     def choose_file(self):
+        if not self.count:
+            raise ValueError('No fortune files found')
         try:
             return self.files[bisect_left(self.keys, random.randrange(self.count))][0]
         except IndexError:
